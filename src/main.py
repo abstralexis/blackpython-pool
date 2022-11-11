@@ -1,5 +1,10 @@
-import os, sys
-import pygame
+# Imports
+import os, sys          # Generic standard libraries
+
+import pygame           # Pygame for graphics
+
+import utils            # Utils module with common variables and functions
+from balls import Ball  # Ball class
 
 class Game:
     """
@@ -30,7 +35,6 @@ class Game:
 
             pygame.display.flip()
             clock.tick(60)
-
 
 if __name__ == "__main__":
     Game()
