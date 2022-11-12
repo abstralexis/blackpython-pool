@@ -19,7 +19,7 @@ def blitRotateCenter(surf, image, topleft, angle):
 
 class Cue:
     def __init__(self, x: float, y: float, cue_ball: Ball):
-        self.size = (200, 200)
+        self.size = (250, 250)
         self.image = pygame.image.load("..\\assets\\cue-centred.png")
         self.image = pygame.transform.scale(self.image, self.size)
         self.angle = 0#deg
@@ -38,7 +38,7 @@ class Cue:
         # Get angle between mouse and pivot point (top left)
         dx = self.cue_ball.centrex - mousex
         dy = self.cue_ball.centrey - mousey
-        self.angle = math.degrees(math.atan2(dx, dy))
+        self.angle = math.degrees(math.atan2(dx, dy)) - 45
 
     def draw(self, screen: pygame.display):
         self.rect.center = (self.cue_ball.centrex, self.cue_ball.centrey)
