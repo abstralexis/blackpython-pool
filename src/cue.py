@@ -28,7 +28,6 @@ class Cue:
         self.rect = pygame.rect.Rect(self.x, self.y, self.size[0], self.size[1])
         self.cue_ball = cue_ball
 
-    #TODO Fix
     def focus(self, screen: pygame.display):
         # Set tip to centre of the ball focused
         self.rect.center = (self.cue_ball.centrex, self.cue_ball.centrey)
