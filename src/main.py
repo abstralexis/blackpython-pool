@@ -22,10 +22,10 @@ class Game:
         pygame.init()                   
         self.WIN = pygame.display.set_mode(self.DIMENSIONS, vsync=1)
 
-        self.testball = Ball(self.WIN_WIDTH/2, self.WIN_HEIGHT/2, 10)
+        self.testball = Ball(self.WIN_WIDTH/2, self.WIN_HEIGHT/2, 8)
         self.testball.colour = (255, 255, 255)
         
-        self.cue = Cue(0, 0)
+        self.cue = Cue(0, 0, self.testball)
 
         self.running = True
         self.main()
@@ -40,7 +40,7 @@ class Game:
                     pygame.quit()
                     sys.exit()
 
-            self.cue.focus(self.WIN, self.testball)
+            self.cue.focus(self.WIN)
 
             self.WIN.fill((0, 0, 0))
 
