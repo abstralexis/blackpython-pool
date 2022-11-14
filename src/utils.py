@@ -25,6 +25,6 @@ class CoordinateTransformer:
         self.height = height
 
     def screen_cartesian_transform(self, p, q):
-        return p, q - self.height
+        return p, self.height - q
 
 ct = CoordinateTransformer(WIDTH, HEIGHT)
