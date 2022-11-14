@@ -4,6 +4,9 @@ for the game, such as basic mathematical calculations
 as well as variables.
 """
 
+WIDTH = 854
+HEIGHT = 480
+
 COLOURS = (
     BLACK := (0, 0, 0),
     GRAY := (127, 127, 127),
