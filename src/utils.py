@@ -15,3 +15,11 @@ COLOURS = (
     CYAN := (0, 255, 255),
     MAGENTA := (255, 0, 255),
 )
+
+class CoordinateTransformer:
+    def __init__(self, width: int, height: int):
+        self.width = width
+        self.height = height
+
+    def screen_cartesian_transform(self, p, q):
+        return p, q - self.height
